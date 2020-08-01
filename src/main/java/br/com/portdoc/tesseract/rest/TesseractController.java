@@ -66,7 +66,7 @@ public class TesseractController {
                 fopimage = ipimage;
             }
             Tesseract instance = new Tesseract();
-            instance.setDatapath("src/main/resources");
+            instance.setDatapath("src/main/resources/tessdata");
             instance.setLanguage("por");
             strRetorno = instance.doOCR(fopimage);
         } catch (Exception e) {
