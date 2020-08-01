@@ -1,5 +1,6 @@
 package br.com.portdoc.tesseract.rest;
 
+
 import net.sourceforge.tess4j.Tesseract;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -67,7 +68,6 @@ public class TesseractController {
             Tesseract instance = new Tesseract();
             instance.setDatapath("src/main/resources/tesseractData");
             instance.setLanguage("por");
-            instance.setHocr(false);
             strRetorno = instance.doOCR(fopimage);
         } catch (Exception e) {
             strRetorno = e.getMessage();
